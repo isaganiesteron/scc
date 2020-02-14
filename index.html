@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42532906-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-42532906-2');
+  </script>
+
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta name='description' content='This is the basic app for speed cubecompetitions web app.'>
+  <meta name='author' content='Isagani Esteron'>
+
+  <title>Speedcube Competitions</title>
+
+  <link rel="icon" href="logo_square.png" type="image/png" sizes="50x50">
+
+  <!-- Bootstrap core CSS -->
+  <link href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class='navbar navbar-expand-lg navbar-dark bg-dark static-top'>
+    <div class='container'>
+      <a class='navbar-brand' href='/'>
+        <img src='logo_square.png' style='height:3em;'>
+        Speedcube Competitions
+      </a>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div class='collapse navbar-collapse' id='navbarResponsive'>
+        <ul class='navbar-nav ml-auto'>
+          <li class='nav-item'>
+            <a class='nav-link' target='about_window' href='about.html'>About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class='container' style='margin-bottom:100px;'>
+    <div class='row'>
+      <div class='col-lg-12 text-center'>
+        <h1 class='mt-5'>Speedcube Competitions <small>(basic version)</small></h1>
+        <p class='lead'>Simply upload WCA competition file, organize, sort, assign competitors and you're done.</p>
+      </div>
+    </div>
+
+    <div class='col-lg-12 text-center'>
+      <button class='btn btn-lg btn-success' type='button' id='toggle_upload'>
+        Upload Competition File
+      </button>
+    </div>
+
+    <br>
+
+    <div class='card' id='upload_file' style='display:none;'>
+      <div class='card-header'>
+        Upload Competition File
+      </div>
+      <div class='card-body'>
+        <p>This can be the wca file or a saved competition file.</p>
+        <div class='col-lg-12 text-center'>
+          <div class='input-group mb-3'>
+            <div class='input-group-prepend'>
+              <span class='input-group-text'>Upload</span>
+            </div>
+            <div class='custom-file'>
+              <input type='file' class='custom-file-input' id='userUpload'>
+              <label class='custom-file-label' for='userUpload'>Choose file</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class='card' id='competition_info' style='display:none;'>
+      <div class='card-header'>
+          Competition Information
+      </div>
+      <div class='card-body'>
+          <label for='comp_name'>Name</label>
+          <div class='input-group input-group-sm mb-3'>
+            <input type='text' id='comp_name_edit' class='form-control' aria-label='Small' aria-describedby='inputGroup-sizing-sm'>
+          </div>
+          <label for='comp_days'>Days</label>
+          <div class='input-group input-group-sm mb-3'>
+            <input type='number' id='comp_days_edit' class='form-control' aria-label='Small' aria-describedby='inputGroup-sizing-sm'>
+          </div>
+          
+          <label for='comp_date'>Date</label>
+          <div class='input-group input-group-sm mb-3'>
+            <input type='date' id='comp_date_edit' class='form-control' aria-label='Small' aria-describedby='inputGroup-sizing-sm'>
+          </div>
+          
+          <label for='comp_venue'>Venue</label>
+          <div class='input-group input-group-sm mb-3'>
+            <input type='text' id='comp_venue_edit' class='form-control' aria-label='Small' aria-describedby='inputGroup-sizing-sm'>
+          </div>
+          <button type='button' id='save_competition' class='btn btn-success btn-sm'>Save Competition Info</button>
+          <button type='button' id='download_competition_file' class='btn btn-info btn-sm'>Download Competition File</button>
+          <!--button type='button' class='btn btn-warning btn-sm'>Reset</button-->
+      </div>
+    </div>
+    
+    <br>
+    <a id='display_button' href='display.html' target='display_window' role='button' class='btn btn-primary btn-lg btn-block' style='display:none;'>Display Competition</a>
+    <br>
+
+    <div id='edit_area' class='event_area'></div>
+
+  </div>
+
+  <div class='row'>
+    <nav class="navbar fixed-bottom navbar-light bg-faded">
+        <div class='col-lg-12 text-center'>
+            <!--script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- speedcubecompetitions.com ->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-6801400614453114"
+                 data-ad-slot="8621650658"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script-->
+        </div>
+    </nav>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src='vendor/jquery/jquery.min.js'></script>
+  <script src='vendor/bootstrap/js/bootstrap.bundle.min.js'></script>
+  <script src='jquery.tabletoCSV.js'></script>
+  <script src='main.js'></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6801400614453114",
+            enable_page_level_ads: true
+      });
+  </script>
+</body>
+
+</html>
